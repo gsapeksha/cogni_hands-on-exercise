@@ -10,6 +10,7 @@ import { CourseCard } from '../../components/course-card/course-card';
   styleUrl: './course-list.css',
 })
 export class CourseList {
+  
 
   courses = [
     'Angular',
@@ -17,6 +18,8 @@ export class CourseList {
     'SQL',
     'TypeScript'
   ];
+
+  selectedCourse = 'Angular';
 
   onEnroll(course: string) {
     alert('Enrolled in ' + course);

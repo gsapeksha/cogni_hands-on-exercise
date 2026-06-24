@@ -7,4 +7,28 @@
     (enrollCourse)="onEnroll($event)">
   </app-course-card>
 
+  <hr>
+
+<h3>ngSwitch Demo</h3>
+
+<div [ngSwitch]="selectedCourse">
+
+  <p *ngSwitchCase="'Angular'">
+    Angular Course Selected
+  </p>
+
+  <p *ngSwitchCase="'Java'">
+    Java Course Selected
+  </p>
+
+  <p *ngSwitchCase="'SQL'">
+    SQL Course Selected
+  </p>
+
+  <p *ngSwitchDefault>
+    No Course Selected
+  </p>
+
+</div>
+
 </div>
