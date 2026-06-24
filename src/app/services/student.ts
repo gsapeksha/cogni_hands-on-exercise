@@ -7,7 +7,7 @@ export class StudentService {
 
   studentName = 'Apeksha';
 
-  course = 'Angular';
+  course = 'Java';
 
   semester = 6;
 
