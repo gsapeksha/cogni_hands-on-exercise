@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { StudentService } from '../../services/student';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './home.css',
 })
 export class Home {
+  studentDetails: any;
+  constructor(private studentService: StudentService) {
+
+  this.studentDetails =
+    this.studentService.getStudentDetails();
+
+}
 
   studentName = 'Apeksha';
 
