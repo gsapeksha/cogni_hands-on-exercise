@@ -7,15 +7,15 @@
 
 <br><br>
 
-<ul>
-
-  <div *ngFor="let user of users">
+<div *ngFor="let user of users">
 
   <div *ngIf="
     user.name.toLowerCase().includes(
     searchText.toLowerCase())">
 
-    <strong>{{ user.name }}</strong>
+    <button (click)="selectUser(user)">
+      {{ user.name }}
+    </button>
 
     <br>
 
@@ -27,4 +27,18 @@
 
 </div>
 
-</ul>
+<div *ngIf="selectedUser">
+
+  <h3>User Details</h3>
+
+  <p><strong>Name:</strong> {{ selectedUser.name }}</p>
+
+  <p><strong>Email:</strong> {{ selectedUser.email }}</p>
+
+  <p><strong>Phone:</strong> {{ selectedUser.phone }}</p>
+
+  <p><strong>Website:</strong> {{ selectedUser.website }}</p>
+
+  <p><strong>Company:</strong> {{ selectedUser.company.name }}</p>
+
+</div>

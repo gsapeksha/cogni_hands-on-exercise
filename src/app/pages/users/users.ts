@@ -15,10 +15,17 @@ export class Users {
 
   users: any[] = [];
   searchText = '';
+  selectedUser: any = null;
+  selectUser(user: any) {
+  this.selectedUser = user;
+}
+  
 
   constructor(private userService: UserService) {
 
   console.log('Users component loaded');
+
+  
 
   this.userService.getUsers().subscribe(
     (data: any) => {
