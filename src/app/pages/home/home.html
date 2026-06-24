@@ -2,7 +2,7 @@
 
 <h3>Interpolation</h3>
 <p>Student Name: {{ studentName }}</p>
-<p>Course: {{ course }}</p>
+<p>First Course: {{ courses[0] }}</p>
 
 <hr>
 
@@ -20,3 +20,17 @@
 <button (click)="increaseCount()">
   Increase Count
 </button>
+
+<h3>*ngIf Demo</h3>
+
+<p *ngIf="showMessage">
+  Welcome to Angular Directives!
+</p>
+
+<h3>*ngFor Demo</h3>
+
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course }}
+  </li>
+</ul>

@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
 
   studentName = 'Apeksha';
+
+  showMessage = true;
 
   course = 'Angular';
 
@@ -20,5 +23,4 @@ export class Home {
   increaseCount() {
     this.count++;
   }
-
 }
