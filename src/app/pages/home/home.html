@@ -50,3 +50,44 @@
   placeholder="Enter your name">
 
 <p>You entered: {{ studentInput }}</p>
+
+<hr>
+
+<h2>Student Registration Form</h2>
+
+<label>Name:</label>
+<br>
+<input
+  type="text"
+  [(ngModel)]="studentForm.name">
+<br><br>
+
+<div *ngIf="submitted && !studentForm.name">
+  Name is required
+</div>
+
+<label>Course:</label>
+<br>
+<input
+  type="text"
+  [(ngModel)]="studentForm.course">
+<br><br>
+
+<div *ngIf="submitted && !studentForm.course">
+  Course is required
+</div>
+
+<label>Semester:</label>
+<br>
+<input
+  type="number"
+  [(ngModel)]="studentForm.semester">
+<br><br>
+
+<div *ngIf="submitted && !studentForm.semester">
+  Semester is required
+</div>
+
+<button (click)="submitForm()">
+  Submit Form
+</button>

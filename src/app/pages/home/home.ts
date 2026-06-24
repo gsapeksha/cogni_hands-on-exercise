@@ -15,6 +15,25 @@ export class Home {
 
   showMessage = true;
 
+  studentForm = {
+  name: '',
+  course: '',
+  semester: ''
+};
+
+submitted = false;
+submitForm() {
+  this.submitted = true;
+
+  if (
+    this.studentForm.name &&
+    this.studentForm.course &&
+    this.studentForm.semester
+  ) {
+    alert('Form Submitted Successfully!');
+  }
+}
+
   course = 'Angular';
 
   courses = [
