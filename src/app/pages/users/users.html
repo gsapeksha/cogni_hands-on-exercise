@@ -1,7 +1,19 @@
 <h2>Users from API</h2>
 
+<input
+  type="text"
+  [(ngModel)]="searchText"
+  placeholder="Search User">
+
+<br><br>
+
 <ul>
-  <li *ngFor="let user of users">
+
+  <div *ngFor="let user of users">
+
+  <div *ngIf="
+    user.name.toLowerCase().includes(
+    searchText.toLowerCase())">
 
     <strong>{{ user.name }}</strong>
 
@@ -9,5 +21,10 @@
 
     {{ user.email }}
 
-  </li>
+    <hr>
+
+  </div>
+
+</div>
+
 </ul>
