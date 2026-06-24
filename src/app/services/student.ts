@@ -9,7 +9,7 @@ export class StudentService {
 
   course = 'Java';
 
-  semester = 6;
+  semester = 7;
 
   getStudentDetails() {
     return {
