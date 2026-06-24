@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { StudentService } from '../../services/student';
@@ -10,7 +10,14 @@ import { StudentService } from '../../services/student';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {
+export class Home implements OnInit, OnDestroy {
+  ngOnInit() {
+  console.log('Home Component Initialized');
+}
+
+ngOnDestroy() {
+  console.log('Home Component Destroyed');
+}
   studentDetails: any;
   constructor(private studentService: StudentService) {
 
@@ -18,6 +25,7 @@ export class Home {
     this.studentService.getStudentDetails();
 
 }
+
 
   studentName = 'Apeksha';
 
