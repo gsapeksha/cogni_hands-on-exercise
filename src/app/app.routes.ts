@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { Users } from './pages/users/users';
 
 import { Home } from './pages/home/home';
 import { CourseList } from './pages/course-list/course-list';
@@ -19,6 +20,11 @@ export const routes: Routes = [
   {
     path: 'profile',
     component: StudentProfile
-  }
+  },
+
+  {
+  path: 'users',
+  component: Users
+}
 
 ];
