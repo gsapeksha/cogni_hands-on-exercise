@@ -1,3 +1,22 @@
-<h2>Welcome Apeksha!</h2>
+<h2>Data Binding Demo</h2>
 
-<p>This is the Home Page.</p>
+<h3>Interpolation</h3>
+<p>Student Name: {{ studentName }}</p>
+<p>Course: {{ course }}</p>
+
+<hr>
+
+<h3>Property Binding</h3>
+<button [disabled]="isDisabled">
+  Submit
+</button>
+
+<hr>
+
+<h3>Event Binding</h3>
+
+<p>Count: {{ count }}</p>
+
+<button (click)="increaseCount()">
+  Increase Count
+</button>
