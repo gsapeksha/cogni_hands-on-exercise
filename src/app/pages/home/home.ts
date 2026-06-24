@@ -13,15 +13,22 @@ export class Home {
 
   studentName = 'Apeksha';
 
-  studentInput = '';
-
   showMessage = true;
 
   course = 'Angular';
 
+  courses = [
+    'Angular',
+    'Java',
+    'SQL',
+    'TypeScript'
+  ];
+
   isDisabled = false;
 
   count = 0;
+
+  studentInput = '';
 
   increaseCount() {
     this.count++;
