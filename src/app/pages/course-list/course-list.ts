@@ -13,11 +13,11 @@ export class CourseList {
   
 
   courses = [
-    'Angular',
-    'Java',
-    'SQL',
-    'TypeScript'
-  ];
+  { name: 'Angular', status: 'passed' },
+  { name: 'Java', status: 'failed' },
+  { name: 'SQL', status: 'pending' },
+  { name: 'TypeScript', status: 'passed' }
+];
 
   selectedCourse = 'Angular';
 
