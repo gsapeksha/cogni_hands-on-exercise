@@ -1,0 +1,54 @@
+<h2>Course List</h2>
+
+<div *ngFor="let course of courses">
+
+  <div
+    [ngClass]="{
+      'passed': course.status === 'passed',
+      'failed': course.status === 'failed',
+      'pending': course.status === 'pending'
+    }"
+
+    [ngStyle]="{
+      'border-left':
+        course.status === 'passed'
+          ? '5px solid green'
+          : course.status === 'failed'
+          ? '5px solid red'
+          : '5px solid gray'
+    }">
+
+    <app-course-card
+      [courseName]="course.name"
+      (enrollCourse)="onEnroll($event)">
+    </app-course-card>
+
+    <p>Status: {{ course.status }}</p>
+
+  </div>
+
+  <hr>
+
+</div>
+
+<h3>ngSwitch Demo</h3>
+
+<div [ngSwitch]="selectedCourse">
+
+  <p *ngSwitchCase="'Angular'">
+    Angular Course Selected
+  </p>
+
+  <p *ngSwitchCase="'Java'">
+    Java Course Selected
+  </p>
+
+  <p *ngSwitchCase="'SQL'">
+    SQL Course Selected
+  </p>
+
+  <p *ngSwitchDefault>
+    No Course Selected
+  </p>
+
+</div>

@@ -1,0 +1,103 @@
+<h2>Data Binding Demo</h2>
+
+<h3>Interpolation</h3>
+<p>Student Name: {{ studentName }}</p>
+<p>First Course: {{ courses[0] }}</p>
+
+<hr>
+
+<h3>Property Binding</h3>
+
+<button [disabled]="isDisabled">
+  Submit
+</button>
+
+<hr>
+
+<h3>Event Binding</h3>
+
+<p>Count: {{ count }}</p>
+
+<button (click)="increaseCount()">
+  Increase Count
+</button>
+
+<hr>
+
+<h3>*ngIf Demo</h3>
+
+<p *ngIf="showMessage">
+  Welcome to Angular Directives!
+</p>
+
+<hr>
+
+<h3>*ngFor Demo</h3>
+
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course }}
+  </li>
+</ul>
+
+<hr>
+
+<h3>Two-Way Data Binding</h3>
+
+<input
+  type="text"
+  [(ngModel)]="studentInput"
+  placeholder="Enter your name">
+
+<p>You entered: {{ studentInput }}</p>
+
+<hr>
+
+<h2>Student Registration Form</h2>
+
+<label>Name:</label>
+<br>
+<input
+  type="text"
+  [(ngModel)]="studentForm.name">
+<br><br>
+
+<div *ngIf="submitted && !studentForm.name">
+  Name is required
+</div>
+
+<label>Course:</label>
+<br>
+<input
+  type="text"
+  [(ngModel)]="studentForm.course">
+<br><br>
+
+<div *ngIf="submitted && !studentForm.course">
+  Course is required
+</div>
+
+<label>Semester:</label>
+<br>
+<input
+  type="number"
+  [(ngModel)]="studentForm.semester">
+<br><br>
+
+<div *ngIf="submitted && !studentForm.semester">
+  Semester is required
+</div>
+
+<button (click)="submitForm()">
+  Submit Form
+</button>
+
+<hr>
+
+<h2>Student Service Data</h2>
+
+<p>Name: {{ studentDetails.name }}</p>
+
+<p>Course: {{ studentDetails.course }}</p>
+
+<p>Semester: {{ studentDetails.semester }}</p>
